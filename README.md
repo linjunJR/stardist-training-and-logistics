@@ -4,7 +4,7 @@ A collection of Jupyter notebooks for creating labelled data and training StarDi
 
 See the original [StarDist](https://stardist.net/) website for more info on the model and its training.
 
-See the [TPE project documentation]() for detailed methods and usage of the notebooks
+See the [TPE project documentation](https://linjunjr.github.io/TPE_Disk_Image_Processing/) for detailed methods and usage of the notebooks
 
 ## Overview
 
