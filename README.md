@@ -1,20 +1,18 @@
 # StarDist Training and Logistics
 
-A collection of Jupyter notebooks for training and managing StarDist models for object detection and segmentation.
+A collection of Jupyter notebooks for creating labelled data and training StarDist models to track photoelastic disks.
+
+See the original [StarDist](https://stardist.net/) website for more info on the model and its training.
+
+See the [TPE project documentation]() for detailed methods and usage of the notebooks
 
 ## Overview
 
-This repository contains tools and workflows for:
-- **Training** StarDist models on custom datasets
-- **Disk detection** through automated model training pipelines
-- **Manual refinement** of predictions via an interactive GUI
-- **Mask generation** for training data preparation
-
-## Notebooks
-
-- **`TRAINING_stardist_disk_finder.ipynb`** - Main training pipeline for StarDist disk detection models
-- **`manual_refine_GUI.ipynb`** - Interactive GUI for manually refining and correcting model predictions
-- **`mask_generator.ipynb`** - Utility for generating training masks from annotated data
+This workflow assumes you have some sub-optimal tracking results at hand, and is seeking to improve the accuracy with stardist. 
+The repository contains three sequential notebooks:
+- **`manual_refine_GUI.ipynb`** lets you clean and correct existing tracking results via an interactive GUI, so the model doesn't learn from inaccurate data
+- **`mask_generator.ipynb`** prepares the data format that stardist requires
+- **`TRAINING_stardist_disk_finder.ipynb`** is the actual training pipeline, largely adated from the official [StarDist tutorial](https://github.com/stardist/stardist/tree/main/examples/2D)
 
 ## Requirements
 
@@ -24,13 +22,4 @@ This repository contains tools and workflows for:
 - Jupyter Notebook
 - OpenCV, NumPy, and other standard scientific Python packages
 
-## Usage
 
-1. Prepare your dataset with annotated images
-2. Use `mask_generator.ipynb` to create training masks
-3. Run `TRAINING_stardist_disk_finder.ipynb` to train your model
-4. Use `manual_refine_GUI.ipynb` to review and refine predictions
-
-## License
-
-See LICENSE file for details.
